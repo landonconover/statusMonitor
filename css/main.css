@@ -18,6 +18,10 @@
    Author's custom styles
    ========================================================================== */
 
+body {
+  background-color: rgb(110, 124, 117);
+}
+
 .border-right {
 border-right: 1px solid #eee;
 }
@@ -38,7 +42,7 @@ border-right: 1px solid #eee;
 
 div#fadeout {
 height:100px; width:100%; position:absolute; bottom:0;
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(124, 228, 112,0)), color-stop(95%,rgba(124, 228, 112,1)));
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(110, 124, 117,0)), color-stop(95%,rgba(110, 124, 117,1)));
 }
 
 #weather h2 {
@@ -144,9 +148,7 @@ i {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
-body {
-  background-color: rgb(124, 228, 112);
-}
+
 .clock-contain {
 /*  margin: 40px auto 20px;
   width: 250px;*/
