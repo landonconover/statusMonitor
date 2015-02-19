@@ -1,22 +1,192 @@
 
 
 /* ==========================================================================
+   Custom Font Definitions
+   ========================================================================== */
+@font-face {
+    font-family: 'weather';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot');
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot?#iefix') format('embedded-opentype'),
+        url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff') format('woff'),
+        url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf') format('truetype'),
+        url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
+    font-weight: normal;
+   font-style: normal;
+}
+
+/* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
+.border-right {
+border-right: 1px solid #eee;
+}
+
+.border-top {
+    border-top: 1px solid #eee;
+}
+
+.row {
+    height: 500px;
+}
+
+#newsContain {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+div#fadeout {
+height:100px; width:100%; position:absolute; bottom:0;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(124, 228, 112,0)), color-stop(95%,rgba(124, 228, 112,1)));
+}
+
+#weather h2 {
+    font-size: 100px;
+}
+
+i {
+  color: black;
+  font-size: 150px;
+  font-family: weather;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.0;
+}
+
+#weather ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 25px;
+}
+
+#weather li {
+  background: #fff;
+  background: rgba(50,150,100,0.60);
+  padding: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  margin-bottom: 10px
+}
+
+#weather .currently {
+  margin: 0 20px;
+}
+
+#weather #forcast li {
+    margin: 5px 5px;
+}
+
+#weather #forcast i {
+    font-size: 35px;
+    color: black;
+    font-family: weather;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.0;
+}
 
 
+.icon-0:before { content: ":"; }
+.icon-1:before { content: "p"; }
+.icon-2:before { content: "S"; }
+.icon-3:before { content: "Q"; }
+.icon-4:before { content: "S"; }
+.icon-5:before { content: "W"; }
+.icon-6:before { content: "W"; }
+.icon-7:before { content: "W"; }
+.icon-8:before { content: "W"; }
+.icon-9:before { content: "I"; }
+.icon-10:before { content: "W"; }
+.icon-11:before { content: "I"; }
+.icon-12:before { content: "I"; }
+.icon-13:before { content: "I"; }
+.icon-14:before { content: "I"; }
+.icon-15:before { content: "W"; }
+.icon-16:before { content: "I"; }
+.icon-17:before { content: "W"; }
+.icon-18:before { content: "U"; }
+.icon-19:before { content: "Z"; }
+.icon-20:before { content: "Z"; }
+.icon-21:before { content: "Z"; }
+.icon-22:before { content: "Z"; }
+.icon-23:before { content: "Z"; }
+.icon-24:before { content: "E"; }
+.icon-25:before { content: "E"; }
+.icon-26:before { content: "3"; }
+.icon-27:before { content: "a"; }
+.icon-28:before { content: "A"; }
+.icon-29:before { content: "a"; }
+.icon-30:before { content: "A"; }
+.icon-31:before { content: "6"; }
+.icon-32:before { content: "1"; }
+.icon-33:before { content: "6"; }
+.icon-34:before { content: "1"; }
+.icon-35:before { content: "W"; }
+.icon-36:before { content: "1"; }
+.icon-37:before { content: "S"; }
+.icon-38:before { content: "S"; }
+.icon-39:before { content: "S"; }
+.icon-40:before { content: "M"; }
+.icon-41:before { content: "W"; }
+.icon-42:before { content: "I"; }
+.icon-43:before { content: "W"; }
+.icon-44:before { content: "a"; }
+.icon-45:before { content: "S"; }
+.icon-46:before { content: "U"; }
+.icon-47:before { content: "S"; }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(124, 228, 112);
+}
+.clock-contain {
+/*  margin: 40px auto 20px;
+  width: 250px;*/
+}
+.clock {
+  margin: 50px auto;
+  border: 5px solid #FFF;
+  border-radius: 100%;
+  display: block;
+  height: 250px;
+  width: 250px;
+  position: relative;
+}
+.clock .hour {
+  background: #fff;
+  height: 0;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  width: 0;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  margin: -60px -2px 0;
+  padding: 60px 2px 0;
+}
+.clock .minute {
+  background: #fff;
+  height: 0;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  width: 0;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  margin: -105px -2px 0;
+  padding: 105px 2px 0;
+}
